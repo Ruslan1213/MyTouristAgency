@@ -1,0 +1,111 @@
+﻿@model TouristAgency.Domain.Models.EfModels.Journey
+
+@{
+    ViewBag.Title = "Details";
+    string a;
+}
+<input type="button" value="Create" onclick="location.href='@Url.Action("Create", "Orders", new {id=Model.IdJourney })'" />
+<h2>Details</h2>
+
+<div>
+    <h4>Journey</h4>
+    <hr />
+    <dl class="container">
+        <dt>
+            @Html.DisplayNameFor(model => model.StartedDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StartedDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ExpirstionDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ExpirstionDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.StartedAmount)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StartedAmount)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.QuantitySold)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.QuantitySold) $
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IsLastMinuteTrip)
+        </dt>
+
+        <dd>
+            @{
+                a = (bool)Model.IsLastMinuteTrip ? "Горячая" : "---";
+            }
+            @Html.DisplayFor(model => a)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Tour.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tour.Name)
+        </dd>
+
+
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Tour.TypesTour.TypeTour)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tour.TypesTour.TypeTour)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Tour.HotelsType.HotelType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tour.HotelsType.HotelType)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Tour.Price)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tour.Price)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Tour.StartNumberOfPeople)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tour.StartNumberOfPeople)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Tour.EndNumberOfPeople)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tour.EndNumberOfPeople)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.IdJourney }) |
+    @Html.ActionLink("Back to List", "Index") |
+</p>

@@ -1,0 +1,16 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "Нет прав";
+    var action = ViewBag.Action; var controller = ViewBag.Controller;
+}
+<div class="container m-5">
+    <h2>У Вас нет прав</h2>
+    <p>
+        <div> Вы можете </div>
+    </p>
+    <p>
+    @Html.ActionLink("На главную", "Index", "Home") |
+    @Html.ActionLink("Войти", "Login", "Account",
+
+    new { returnUrl = ViewBag.returnUrl }, null)</p>
+</div>

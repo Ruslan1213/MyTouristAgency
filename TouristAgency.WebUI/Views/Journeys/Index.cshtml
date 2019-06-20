@@ -1,0 +1,125 @@
+﻿@model PagedList.IPagedList<TouristAgency.Domain.Models.EfModels.Journey>
+@using PagedList.Mvc;
+<link href="~/Content/PagedList.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="~/Content/MyStyle.css">
+@{
+    ViewBag.Title = "Index";
+    string isHot;
+    
+}
+<p>@ViewBag.Error</p>
+@using (Html.BeginForm())
+{
+ <div class="w-100  container  p-1">
+     <form>
+         <div class="form-row">
+             <div class="container">
+                 <div class="row justify-content-center">
+                     <div class="col-sm p-2">
+                         Тип отеля: @Html.DropDownList("HotelType", (IEnumerable<SelectListItem>)ViewBag.HotelsType, "---Please select ---")
+                     </div>
+                     <div class="col-sm">
+                         @Html.TextBox("startPrice", ViewBag.startPrice as string, new { @class = "form-control col-md-8", placeholder = "Цена от ($)"})
+                     </div>
+                     <div class="col-sm">
+                         @Html.TextBox("sAmountOfPeople", ViewBag.sAmountOfPeople as string, new { @class = "form-control col-md-8", placeholder = "Людей от" })              
+                     </div>
+                 </div>
+                 <hr class="myhr">
+                 <div class="row">
+                     <div class="col-sm p-2">
+                         Тип тура :&nbsp; @Html.DropDownList("TypeTour", (IEnumerable<SelectListItem>)ViewBag.TypesTours, "---Please select ---")
+                     </div>
+                     <div class="col-sm">
+                         @Html.TextBox("finalPrice", ViewBag.finalPrice as string, new { @class = "form-control col-md-8", placeholder = "Цена до ($)" })
+                     </div>
+                     <div class="col-sm">
+                         @Html.TextBox("eAmountOfPeople", ViewBag.eAmountOfPeople as string, new { @class = "form-control col-md-8", placeholder = "Людей до" })
+                     </div>
+                     
+                 </div>
+             </div>
+         </div>
+     </form>
+     <p><input class="btn-primary" type="submit" value="Search" /></p>
+ </div>
+}
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            Название тура
+        </th>
+        <th>
+            Стартовая дата
+        </th>
+        <th>
+            Конечная дата
+        </th>
+        <th>
+            Колличество выделеных путевок
+        </th>
+        <th>
+            Продано путевок
+        </th>
+        <th>
+            Горящая путеывка
+        </th>
+        <th>
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Tour.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StartedDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ExpirstionDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StartedAmount)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.QuantitySold)
+            </td>
+            <td>
+                @{
+                    isHot = (bool)item.IsLastMinuteTrip ? "Горящая" : "---";
+                }
+                @Html.DisplayFor(modelItem => isHot)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IsDeleted)
+            </td>
+            <td>
+                @Html.ActionLink("Details", "Details", new { id = item.IdJourney }) |
+                @if (User.IsInRole("admin") || User.IsInRole("manager"))
+                {
+                    @Html.ActionLink("Edit", "Edit", new { id = item.IdJourney, @class = "p-1" });
+
+
+                }
+                @if (User.IsInRole("admin"))
+                {
+                    @Html.ActionLink("Delete", "Delete", new { id = item.IdJourney });
+                }
+            </td>
+        </tr>
+    }
+
+</table>
+    Страница @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) из @Model.PageCount
+    <div class="container col-4">
+        @Html.PagedListPager(Model, page => Url.Action("Index", new { page, finalPrice=ViewBag.finalPrice, startPrice = @ViewBag.startPrice, sAmountOfPeople=ViewBag.sAmountOfPeople, eAmountOfPeople=ViewBag.eAmountOfPeople }))
+    </div>
+    @Html.ActionLink("Туры", "Index", "Tours")

@@ -1,0 +1,36 @@
+﻿@model TouristAgency.WebUI.Models.ApplicationMyUser
+
+@{
+    ViewBag.Title = "User";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>ApplicationMyUser</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        @HttpContext.Current.User.IsInRole("Administrator")
+        <dt>
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UserName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UserName)
+        </dd>
+
+    </dl>
+    @foreach (var order in Model.Orders)
+    {
+        <p>@order.Journey.Tour.Name</p>
+        <p>@order.OrderStatus.OrdersStatus</p>
+        <p>@order.Journey.Tour.Price</p>
+    }
+</div>

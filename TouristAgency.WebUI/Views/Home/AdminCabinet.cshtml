@@ -1,0 +1,59 @@
+﻿@model TouristAgency.WebUI.Models.ApplicationMyUser
+
+@{
+    Layout = "~/Views/Shared/_LayoutForAdminAndManager.cshtml";
+    ViewBag.Title = "Details";
+}
+
+<h2>ADMIN</h2>
+<div class="text-centr text-black-50">
+    <p>
+        @Html.ActionLink("Create New user", "AddUser", new { controller = "Admin" }, new { @class = "btn btn-dark" })
+    </p>
+    <p>
+        @Html.ActionLink("Work with users", "Index", new { controller = "ApplicationMyUsers" }, new { @class = "btn btn-dark" })
+    </p>
+    <p>
+        @Html.ActionLink("Work with order", "Index", new { controller = "Orders" }, new { @class = "btn btn-dark" })
+    </p>
+    <p>
+        @Html.ActionLink("Create New Tour", "Index", new { controller = "Tours" }, new { @class = "btn btn-dark" })
+    </p>
+    <p>
+        @Html.ActionLink("Create New Journey", "Index", new { controller = "Journeys" }, new { @class = "btn btn-dark" })
+    </p>
+    <p>
+        @Html.ActionLink("Create New Type Tour", "Index", new { controller = "TypesTours" }, new { @class = "btn btn-dark" })
+    </p>
+    <p>
+        @Html.ActionLink("Users", "Index", new { controller = "ApplicationMyUsers" }, new { @class = "btn btn-dark" })
+    </p>
+    <p>
+        @Html.ActionLink("Order Status", "Index", new { controller = "OrderStatus" }, new { @class = "btn btn-dark" })
+    </p>
+    <p>
+        @Html.ActionLink("Hotels Type", "Index", new { controller = "HotelsTypes" }, new { @class = "btn btn-dark" })
+    </p>
+</div>
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UserName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UserName)
+        </dd>
+
+    </dl>
+</div>

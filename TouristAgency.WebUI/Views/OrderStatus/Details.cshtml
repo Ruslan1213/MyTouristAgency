@@ -1,0 +1,24 @@
+﻿@model TouristAgency.Domain.Models.EfModels.OrderStatus
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<div>
+    <h4>OrderStatus</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.OrdersStatus)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OrdersStatus)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.IdOrder }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

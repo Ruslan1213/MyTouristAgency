@@ -1,0 +1,45 @@
+﻿@model TouristAgency.WebUI.Models.ApplicationMyUser
+
+@{
+    Layout = "~/Views/Shared/_LayoutForAdminAndManager.cshtml";
+    ViewBag.Title = "Manager";
+}
+
+<h2>Manager</h2>
+<div class="text-centr text-black-50 ">
+    <p>
+        @Html.ActionLink("Work with order", "Index", new { controller = "Orders" }, new { @class = "btn btn-light" })
+    </p>
+    <p>
+        @Html.ActionLink("Create New Journey", "Index", new { controller = "Journeys" }, new { @class = "btn btn-light" })
+    </p>
+</div>
+<div>
+    <h4>ApplicationMyUser</h4>
+    <hr />
+    <dl class="dl-horizontal">
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UserName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UserName)
+        </dd>
+
+    </dl>
+    @foreach (var order in Model.Orders)
+    {
+        <p>@order.Journey.Tour.Name</p>
+        <p>@order.OrderStatus.OrdersStatus</p>
+        <p>@order.Journey.Tour.Price</p>
+    }
+</div>

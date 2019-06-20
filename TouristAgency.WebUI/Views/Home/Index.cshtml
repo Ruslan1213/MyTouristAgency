@@ -1,0 +1,276 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+@if (ViewBag.Error != null)
+{
+    if ((bool)ViewBag.Error == true)
+    {
+        <h3 class="text-danger">Dfiff wec egjkldhk</h3>
+        <script>
+            javascript: document.getElementById('logoutForm').submit()
+        </script>
+
+    }
+}
+
+<main class="w-100">
+    <div class="container">
+        <div class="row">
+            <div class="col m-1 h-50 bg-light">
+                <h3 class="text-center text-dark">
+                    Новости
+                </h3>
+                <div class="container align-content-between">
+                    <div class="m-1 card" style="width: 18rem;">
+                        <div class="card-body">
+                            <h5 class="card-title">Новости туров</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">Туризм переходит на «блокчейн»</h6>
+                            <p class="card-text">
+                                Туристическая платформа с поддержкой блокчейна будет запущена в России на Северном Урале - в регионе Югра...
+                            </p>
+                            <button type="button" class="btn bgIs" data-toggle="modal" data-target="#exampleModal">
+                                Learn more
+                            </button>
+                        </div>
+                    </div>
+                    <div class="card m-1" style="width: 18rem;">
+                        <div class="card-body">
+                            <h5 class="card-title">Новости для туриста</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">АТОУ: Украины и Турции принадлежит 80% проданных туров</h6>
+                            <p class="card-text">Спрос на пакетные туры в Украине вырос на 10%, при этом безусловными лидерами остаются Украине и Турция. Такую оценку представили эксперты...</p>
+                            <button type="button" class="btn bgIs" data-toggle="modal" data-target="#exampleModal1">
+                                Learn more
+                            </button>
+                        </div>
+                    </div>
+                    <div class="card m-1" style="width: 18rem;">
+                        <div class="card-body">
+                            <h5 class="card-title">Новости</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">В Барселоне разрешили достроить Храм Святого Семейства</h6>
+                            <p class="card-text">
+                                Власти Барселоны выдали официальное разрешение на строительство одного из самых известных зданий в мире – Храма Святого Семейства...
+
+                            </p>
+                            <button type="button" class="btn bgIs" data-toggle="modal" data-target="#exampleModal2">
+                                Learn more
+                            </button>
+                        </div>
+                    </div>
+                    <div class="m-1 card" style="width: 18rem;">
+                        <div class="card-body">
+                            <h5 class="card-title">Новсти про туры</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">Wizz Air увеличит частоту рейсов Киев – Таллинн</h6>
+                            <p class="card-text">
+                                Wizz Air с 18 июля увеличит частоту полетов на маршруте Киев-Таллинн с четырех до пяти рейсов в неделю...
+                            </p>
+                            <button type="button" class="btn bgIs" data-toggle="modal" data-target="#exampleModal3">
+                                Learn more
+                            </button>
+                        </div>
+                    </div>
+                    <div class="card m-1" style="width: 18rem;">
+                        <div class="card-body">
+                            <h5 class="card-title">Новости туриста</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">Власти Бенидорма хотят ввести «черные списки» туристов</h6>
+                            <p class="card-text">
+                                Власти испанского курорта Бенидорм планируют планируют ввести «черные списки» туристов...
+                            </p>
+                            <button type="button" class="btn bgIs" data-toggle="modal" data-target="#exampleModal4">
+                                Learn more
+                            </button>
+                        </div>
+                    </div>
+                    <div class="card m-1" style="width: 18rem;">
+                        <div class="card-body">
+                            <h5 class="card-title">Новости</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">Турпоток из Украины в Турцию значительно вырос</h6>
+                            <p class="card-text">
+                                За четыре месяца 2019 года туристический поток из Украины в Турцию вырос на 13,8%....
+                            </p>
+                            <button type="button" class="btn bgIs" data-toggle="modal" data-target="#exampleModal5">
+                                Learn more
+                            </button>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+            </div>
+            <div class="w-100 col-7 m-1 bg-light">
+                <hr>
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe class="embed-responsive-item" src="~/Content/Video/Пляжи.mp4" allowfullscreen></iframe>
+                </div>
+                <hr>
+                <p class="text-left text-dark">
+                    Турагент — организация или индивидуальный предприниматель, занимающиеся продажей сформированных туроператором туров. Турагент приобретает туры у туроператора и реализует туристский продукт покупателю, либо выступает посредником между туристом и туроператором за комиссионное вознаграждение, предоставляемое туроператором. Крупнейшие турагенты объединены в международную ассоциацию IATA.
+                </p>
+                <hr>
+
+                <div id="carouselExampleIndicators" class="p-5 carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="~/Content/Images/photo1.jpg" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="~/Content/Images/photo2.jpg" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="~/Content/Images/photo3.jpg" class="d-block w-100" alt="...">
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+                <p class="text-left text-dark">
+                    Турагенты не владеют средствами обслуживания и выступают посредниками между предприятием туристского обслуживания и покупателем туристской путевки, продвигая и реализуя туристский продукт.
+                </p>
+                <hr>
+                <hr>
+                <div class="jumbotron">
+                    <h1 class="display-4">Наши партнеры!</h1>
+                    <p class="lead">Это лучшие отели по всему миру которые предоставят вам комфортный отдых и удобство а также интересные развлечения и многое другое</p>
+                    <hr class="my-4">
+                    <p>Отдыхайте с нашими отелями и не пожалеете!!!</p>
+                    <p class="lead">
+                        <a class="btn btn-primary bgIs" href="http://www.hotel-duke.com/" role="button">Learn more</a>
+                    </p>
+                </div>
+                <p class="text-left text-dark">
+                    Самые наилучшие предложения «из первых рук» и по приятным ценам. Звоните Сейчас! Мы предоставляем полный спектр туристических услуг. Звоните Сейчас! 100% гарантия качества. Полный спектр услуг.
+                </p>
+
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Туризм переходит на «блокчейн»</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                Туристическая платформа с поддержкой блокчейна будет запущена в России на Северном Урале - в регионе Югра. Соответствующее сообщение подписал в ходе Петербургского Международного Экономического Форума (ПМЭФ) гендиректор регионального фонда развития Роман Генкель и Александр Бородичев, гендиректор стартапа блокчейна «Universa». Как сообщает компания, система позволит отслеживать государственные расходы и инвестиции для обеспечения прозрачности. Эксперты туристического рынка согласны, что у технологии блокчейна большое будущее в российском туризме.
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal fade" id="exampleModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel1" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel1">АТОУ: Украины и Турции принадлежит 80% проданных туров</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                Спрос на пакетные туры в Украине вырос на 10%, при этом безусловными лидерами остаются Россия и Турция. Такую оценку представили эксперты аналитической службы Ассоциации туроператоров.При этом первое место у туроператоров по продажам занимает Турция – по их оценкам, через туроператоров туда отправятся 4,5 млн человек. Что касается внутренних курортов, то в Украине проведут отпуск более 3 млн организованных туристов. Такая существенная разница объясняется в первую очередь большим количеством самостоятельных туристов, путешествующих по Украине. В то время как Турцию туристы традиционно приобретают у туроператоров.
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel2" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel2">В Барселоне разрешили достроить Храм Святого Семейства</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                Власти Барселоны выдали официальное разрешение на строительство одного из самых известных зданий в мире – Храма Святого Семейства работы архитектора Антонио Гауди. Строительство католической церкви началось еще в 1882 году – тогда был заложен первый камень сооружения. Однако, как пишет DW, ни в каких официальных реестрах нет разрешения на это строительство. То, что известная туристическая достопримечательность уже 137 лет подряд возводится незаконно, обнаружили лишь в 2016 году. Есть только одно упоминание о том, что Гауди однажды пришел к властям деревни Сант-Марти, что позже стала районом Барселоны, и попросил разрешения на строительство, однако ответа не получил. Теперь, как отметили в городской власти Барселоны, «историческая аномалия в нашем городе» была ликвидирована. Запланировано, что храм закончат строить в 2026 году – к 100-летию со смерти Гауди. Если все планы воплотятся в жизнь, то собор станет самым высоким религиозным сооружением в Европе. Каждый год более 4,5 миллионов желающих посещают эту огромную католическую церковь и платят от 19 до 43 евро за вход. Храм внесен в наследие Юнеско в 2005 году. Гауди трагически умер в 1926 году под колесами трамвая, на тот момент он успел построить только один фасад здания, хотя все последние годы посвятил этому проекту. С тех пор строительство прерывалось на несколько лет из-за гражданской войны, а созданные Гауди модель и чертеж собора уничтожили анархисты. А в 1990 годах строительство вообще хотели прекратить «ввиду нецелесообразности», но оно продолжилось благодаря финансированию католических организаций и меценатов со всего мира.
+
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel3" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel3">Wizz Air увеличит частоту рейсов Киев – Таллинн</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                Wizz Air с 18 июля увеличит частоту полетов на маршруте Киев-Таллинн с четырех до пяти рейсов в неделю, свидетельствует информация в системе бронирования авиаперевозчика. Дополнительные полеты будут выполняться по четвергам до 24 октября включительно, после чего частота вернется до нынешнего уровня четыре рейса в неделю. Сейчас Wizz Air выполняет рейсы по понедельникам, средам, пятницам и воскресеньям. На линию Киев-Таллинн лоу-кост вышел 21 июня 2018 года. В летний сезон 2019 года полеты выполнялись три раза в неделю, в сезон зимней навигации 2019/2020 годов частота была сокращена до двух рейсов в неделю. Прямые рейсы Киев-Таллинн также выполняет эстонская авиакомпания Nordica. Однако в отличие от Wizz Air, который летает из аэропорта Жуляны, Nordica совершает рейсы в Борисполь.
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal fade" id="exampleModal4" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel4" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel4">Власти Бенидорма хотят ввести «черные списки» туристов</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                Власти испанского курорта Бенидорм планируют планируют ввести «черные списки» туристов за непристойное поведение на почве алкогольного опьянения, сообщает dailymail.co.uk. Таким гостям города запретят в будущем въезд на его территорию. Причиной нововведения послужили многочисленные жалобы местных жителей, поступающие от владельцев кафе и баров. В связи с драками туристов некоторые заведения вынуждены закрыть. По заявлению местных властей, каждое действие будет рассматриваться в индивидуальном порядке, но, как именно, местные власти планируют это сделать — не уточняется.
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="modal fade" id="exampleModal5" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel5" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel5">Турпоток из Украины в Турцию значительно вырос</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                За четыре месяца 2019 года туристический поток из Украины в Турцию вырос на 13,8%, если сравнить с аналогичным периодом 2018-го. Об этом говорится в сообщении Посольства Турции в Украине, которое есть в распоряжении Укринформа. «По данным Министерства культуры и туризма Турецкой Республики, за первые четыре месяца 2019 года Турцию посетили 211 804 украинца, что на 13,82% больше, чем за такой же период 2018 года. По итогам 1-го квартала Украина вошла в десятку стран-лидеров», – говорится в сообщении. Летний сезон только начинается, а курорты Средиземноморского и Эгейского побережий уже пользуются популярностью среди отдыхающих. Так, в Анталии за январь-май 2019 года количество украинских туристов достигло 164 922 (прирост - 5,05%). А курорты Муглы (Фетхие, Мармарис, Даламан, Бодрум) приняли 4 724 украинца (прирост турпотока составил 306%). Также наблюдается стабильный рост турпотока в Стамбул: за январь-апрель город посетили 116 112 туристов из Украины, что на 6,4% больше, чем за аналогичный период предыдущего года. «Первый квартал 2019 года оказался очень успешным по статистическим данным для основных регионов как пляжного, так и экскурсионного туризма. Важно отметить, что украинцы стали больше интересоваться историческими и культурными памятниками Турции, что отражается в высоких показателях посещаемости Стамбула, Каппадокии и других экскурсионных направлений», – прокомментировал атташе по туризму Посольства Турции в Украине Берат Йылдыз. В посольстве отметили, что общий турпоток в Турцию также демонстрирует рост. «Количество иностранцев, посетивших Турцию в январе-апреле 2019 года, увеличилась на 12,22% по сравнению с аналогичным периодом прошлого года и составляет 8 735 268 человек», – отметили в дипломатическом учреждении.
+
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+            </div>
+        </div>
+    </div>
+</main>

@@ -1,0 +1,57 @@
+﻿@model TouristAgency.Domain.Models.EfModels.Order
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+<div class="container text-danger">
+    @ViewBag.Error
+</div>
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+<div class="form-horizontal">
+    <h4>Order</h4>
+    <hr />
+    <div class="invisible">
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+            @Html.LabelFor(model => model.IdJourney, "IdJourney", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.TextBoxFor(model => model.IdJourney, new { value = Model.IdJourney, @readonly = true })
+                @Html.ValidationMessageFor(model => model.IdJourney, "", new { @class = "text-danger" })
+            </div>
+
+        </div>
+    </div>
+    <p>
+        <h3>
+            @Html.TextBoxFor(model=>model.Journey.Tour.Name,new  {@class="col-md-12",@readonly = true })
+        </h3>
+    </p>
+
+    <div class="container">
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+            @Html.LabelFor(model => model.IdJourney, "Колличество путевок", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.TextBoxFor(model => model.CountOfJourneys, "CountOfJourneys", new { value = Model.IdJourney })
+                @Html.ValidationMessageFor(model => model.CountOfJourneys, "", new { @class = "text-danger" })
+            </div>
+
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" value="Подтвердите заказ" class="btn btn-primary" />
+        </div>
+    </div>
+</div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>

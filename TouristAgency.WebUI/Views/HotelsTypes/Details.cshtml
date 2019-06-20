@@ -1,0 +1,24 @@
+﻿@model TouristAgency.Domain.Models.EfModels.HotelsType
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<div>
+    <h4>HotelsType</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.HotelType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HotelType)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.IdHotelsType }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

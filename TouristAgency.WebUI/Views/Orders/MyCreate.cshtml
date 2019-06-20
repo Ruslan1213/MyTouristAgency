@@ -1,0 +1,39 @@
+﻿@model TouristAgency.Domain.Models.EfModels.Order
+
+@{
+    ViewBag.Title = "MyCreate";
+}
+
+<h2>MyCreate</h2>
+
+<div>
+    <h4>Order</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Journey.Tour.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Journey.Tour.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.User.UserName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.User.UserName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.User.Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.User.Email)
+        </dd>
+    </dl>
+</div>
+
+<p>
+</p>

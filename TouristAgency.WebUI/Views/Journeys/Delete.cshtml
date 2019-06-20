@@ -1,0 +1,80 @@
+﻿@model TouristAgency.Domain.Models.EfModels.Journey
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Journey</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Tour.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tour.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.StartedDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StartedDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ExpirstionDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ExpirstionDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.StartedAmount)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StartedAmount)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.QuantitySold)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.QuantitySold)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IsLastMinuteTrip)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IsLastMinuteTrip)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IsDeleted)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IsDeleted)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

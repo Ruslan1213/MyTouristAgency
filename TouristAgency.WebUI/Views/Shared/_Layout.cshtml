@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title</title>
+    <script src="~/Scripts/jquery-3.3.1.slim.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="~/Content/bootstrap.min.css">
+    <link rel="stylesheet" href="~/Content/MyStyle.css">
+</head>
+@Scripts.Render("~/bundles/modernizr")
+
+<body>
+    <header class="h-25 w-100" role="banner">
+        <img class="h-25 w-100" src="~/Content/Images/header.png" alt="web-revenue.ru">
+    </header>
+
+
+    <nav class="navbar navbar-expand-lg navbar-light bgIs">
+        @Html.ActionLink("Имя приложения", "Index", "Home", new { area = "" }, new { @class = "text-white navbar-brand" })
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarText">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    @Html.ActionLink("Домашняя страница", "Index", "Home", null, new { @class = "text-white nav-link" })<span class="sr-only">(current)</span>
+                </li>
+                <li class="nav-item">
+                    @Html.ActionLink("О нас", "About", "Home", null, new { @class = "text-white nav-link" })
+                </li>
+                <li class="nav-item ">
+                    @Html.ActionLink("Контакт", "Contact", "Home", null, new { @class = "text-white nav-link" })
+                </li>
+                <li class="nav-item ">
+                    @Html.ActionLink("Туры", "Index", "Journeys", null, new { @class = "text-white nav-link" })
+                </li>
+            </ul>
+                @Html.Partial("_LoginPartial", new { @class = "btn btn-light" })
+        </div>
+    </nav>
+
+
+
+
+
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer class="fixed-bottom bgIs w-100">
+            <div class="container">
+                <div class="row">
+                    <div class="p-4 text-left col text-light">
+                        &copy;Copyright Volodko Ruslan
+                    </div>
+                    <div class="p-4 text-center col text-light">
+                        @DateTime.Now.Year
+                    </div>
+                    <div class="col p-3">
+                        <a class="float-right btn btn-light my-2 my-sm-0" href="">To Top</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+
+</body>
+</html>

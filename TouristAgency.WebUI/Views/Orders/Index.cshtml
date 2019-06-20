@@ -1,0 +1,55 @@
+﻿@model PagedList.IPagedList<TouristAgency.Domain.Models.EfModels.Order>
+@using PagedList.Mvc;
+<link href="~/Content/PagedList.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="~/Content/MyStyle.css">
+@{
+    ViewBag.Title = "Index";
+}
+<h2>Index</h2>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayName("Название заказаного тура")
+        </th>
+        <th>
+            @Html.DisplayName("Почта заказчика")
+        </th>
+        <th>
+            @Html.DisplayName("Запрошено путевок")
+        </th>
+        <th>
+            @Html.DisplayName("Скидка")
+        </th>
+        <th>
+            @Html.DisplayName("Статус заказа")
+        </th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Journey.Tour.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.User.Email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CountOfJourneys)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Discount)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OrderStatus.OrdersStatus)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.IdOrder }) |
+                @Html.ActionLink("Details", "Details", new { id = item.IdOrder })
+            </td>
+        </tr>
+    }
+</table>
+ Страница @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) из @Model.PageCount
+<div class="container col-4">
+    @Html.PagedListPager(Model, page => Url.Action("Index", new { page, @class = "btn btn-primary" }))
+</div>

@@ -1,0 +1,36 @@
+﻿@using (Html.BeginForm())
+{
+    <div class="w-100  container  p-1">
+        <form>
+            <div class="form-row">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-sm p-2">
+                            Тип отеля: @Html.DropDownList("HotelType", (IEnumerable<SelectListItem>)ViewBag.HotelsType, "---Please select ---")
+                        </div>
+                        <div class="col-sm">
+                            @Html.TextBox("startPrice", null, new { @class = "form-control col-md-8", placeholder = "Цена от ($)" })
+                        </div>
+                        <div class="col-sm">
+                            @Html.TextBox("sAmountOfPeople", null, new { @class = "form-control col-md-8", placeholder = "Людей от" })
+                        </div>
+                    </div>
+                    <hr class="myhr">
+                    <div class="row">
+                        <div class="col-sm p-2">
+                            Тип тура :&nbsp; @Html.DropDownList("TypeTour", (IEnumerable<SelectListItem>)ViewBag.TypesTours, "---Please select ---")
+                        </div>
+                        <div class="col-sm">
+                            @Html.TextBox("finalPrice", null, new { @class = "form-control col-md-8", placeholder = "Цена до ($)" })
+                        </div>
+                        <div class="col-sm">
+                            @Html.TextBox("eAmountOfPeople", null, new { @class = "form-control col-md-8", placeholder = "Людей до" })
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </form>
+        <p><input class="btn-primary" type="submit" value="Search" /></p>
+    </div>
+}
