@@ -44,10 +44,14 @@ namespace TouristAgency.Domain.Models.EfModels
 
         public int DateDifference()
         {
-            if (this.ExpirstionDate.Value.Year == this.StartedDate.Value.Year)
-                return this.ExpirstionDate.Value.Month - this.StartedDate.Value.Month;
-            else
-                return (this.ExpirstionDate.Value.Year - this.StartedDate.Value.Year) * 12;
+            if (ExpirstionDate != null && StartedDate != null )
+            {
+                if (this.ExpirstionDate.Value.Year == this.StartedDate.Value.Year)
+                    return this.ExpirstionDate.Value.Month - this.StartedDate.Value.Month;
+                else
+                    return (this.ExpirstionDate.Value.Year - this.StartedDate.Value.Year) * 12;
+            }
+            else return 5;
         }
 
         public virtual Tour Tour { get; set; }

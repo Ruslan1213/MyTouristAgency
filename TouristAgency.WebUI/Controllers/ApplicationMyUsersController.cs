@@ -99,38 +99,5 @@ namespace TouristAgency.WebUI.Controllers
             }
             return View(applicationMyUser);
         }
-            
-
-        //    // GET: Journeys/Delete/5
-        //    public ActionResult Delete(string id)
-        //    {
-        //        ApplicationMyUser user = applicationMyUserRepository.FindUser(id);
-        //        if (user == null)
-        //        {
-        //            return HttpNotFound();
-        //        }
-        //        return View(user);
-        //    }
-
-
-
-        //// POST: Journeys/Delete/5
-        //[HttpPost, ActionName("Delete")]
-        //[ValidateAntiForgeryToken]
-        //public async Task<ActionResult> DeleteConfirmed(string id)
-        //{
-
-        //    var userManager = new ApplicationUserManager(new UserStore<ApplicationMyUser>(new ApplicationDbContext()));
-
-        //    ApplicationMyUser user = await userManager.FindByIdAsync(id);
-        //    if (user != null)
-        //    {
-        //        user.LockoutEnabled = true;
-        //        user.LockoutEndDateUtc = DateTime.Now.AddYears(100);
-        //        await userManager.UpdateAsync(user);
-        //        return RedirectToAction("Home/Index");
-        //    }
-        //    return HttpNotFound();
-        //}
     }
 }

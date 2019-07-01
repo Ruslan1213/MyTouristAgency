@@ -23,6 +23,7 @@ namespace TouristAgency.Domain.Models.EfModels
         [Required]
         [Display(Name = "Название тура")]
         [MaxLength(35)]
+        [StringLength(256, MinimumLength = 5, ErrorMessage = "Длина строки должна быть от 10 до 256 символов")]
         public string Name { get; set; }
         [Required]
         [Display(Name = "Цена")]

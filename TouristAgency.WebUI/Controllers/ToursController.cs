@@ -76,8 +76,10 @@ namespace TouristAgency.WebUI.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "IdTour,IdTypeTour,IdHotelsType,Name,Discription,Price,StartNumberOfPeople,EndNumberOfPeople")] Tour tour)
         {
+            string error = "";
             TourValidation tourValidation = new TourValidation(tour);
-            if (ModelState.IsValid && tourValidation.IsValidationSuccessful())
+            error = tourValidation.IsValidationSuccessful().ErrorValidation;
+            if (ModelState.IsValid && tourValidation.IsValidationSuccessful().Validation)
             {
                 tour.IsDeleted = false;
                 log.Info(" Пользователь " + User.Identity.Name + " c айпи " + Request.UserHostAddress + " добавил тур " + tour.IdTour + " с названием " + tour.Name);
@@ -87,6 +89,8 @@ namespace TouristAgency.WebUI.Controllers
 
             ViewBag.IdHotelsType = new SelectList(dbHotelsType.ToList(), "IdHotelsType", "HotelType", tour.IdHotelsType);
             ViewBag.IdTypeTour = new SelectList(dbTypesTour.ToList(), "IdTypeTour", "TypeTour", tour.IdTypeTour);
+
+            ViewBag.error = error;
             return View(tour);
         }
 
@@ -116,8 +120,10 @@ namespace TouristAgency.WebUI.Controllers
         [Authorize(Roles = "admin")]
         public ActionResult Edit([Bind(Include = "IdTour,IdTypeTour,IdHotelsType,Name,Discription,Price,StartNumberOfPeople,EndNumberOfPeople,IsDeleted")] Tour tour)
         {
+            string error = "";
             TourValidation tourValidation = new TourValidation(tour);
-            if (ModelState.IsValid && tourValidation.IsValidationSuccessful())
+            error = tourValidation.IsValidationSuccessful().ErrorValidation;
+            if (ModelState.IsValid && tourValidation.IsValidationSuccessful().Validation)
             {
                 db.Modified(tour);
                 log.Info(" Пользователь " + User.Identity.Name + " c айпи " + Request.UserHostAddress + " изменил тур " + tour.IdTour + " с названием " + tour.Name);
@@ -126,8 +132,11 @@ namespace TouristAgency.WebUI.Controllers
             }
             ViewBag.IdHotelsType = new SelectList(dbHotelsType.ToList(), "IdHotelsType", "HotelType", tour.IdHotelsType);
             ViewBag.IdTypeTour = new SelectList(dbTypesTour.ToList(), "IdTypeTour", "TypeTour", tour.IdTypeTour);
+
+            ViewBag.error = error;
             return View(tour);
         }
+
         [Authorize(Roles = "admin")]
         public ActionResult Delete(int? id)
         {

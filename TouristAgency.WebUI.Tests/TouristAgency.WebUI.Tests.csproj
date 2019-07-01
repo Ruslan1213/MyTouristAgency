@@ -131,7 +131,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controllers\HotelsTypeControllerTest.cs" />
-    <Compile Include="Controllers\JourneyControllerTest.cs" />
     <Compile Include="Controllers\OrdersControllerTest.cs" />
     <Compile Include="Controllers\OrderStatusControllerTest.cs" />
     <Compile Include="Controllers\ToursControllerTest.cs" />

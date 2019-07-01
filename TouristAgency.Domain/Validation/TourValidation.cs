@@ -11,18 +11,67 @@ namespace TouristAgency.Domain.Validation
     {
         Tour tour;
 
+        public ValidationError Error { get; set; }
         public TourValidation(Tour tour)
         {
             this.tour = tour;
+            Error = new ValidationError();
         }
 
-        private bool IsEndNumberOfPeopleValid() => tour.EndNumberOfPeople < 0 ? false : true;
+        private bool IsEndNumberOfPeopleValid()
+        {
+            if (tour.EndNumberOfPeople < 0)
+            {
+                Error.ErrorValidation += " Конечное количество людей не может быть меньше нуля! ";
+                return false;
+            }
+            else return true;
+        }
 
-        private bool IsStartNumberOfPeopleValid() => tour.StartNumberOfPeople < 0 ? false : true;
+        private bool IsStartNumberOfPeopleValid()
+        {
+            if (tour.StartNumberOfPeople < 0)
+            {
+                Error.ErrorValidation += " Стартовое количество людей не может быть меньше нуля! ";
+                return false;
+            }
+            else return true;
+        }
 
-        private bool IsPriseValid() => tour.Price < 0 ? false : true;
+        private bool IsPriseValid()
+        {
+            if (tour.Price <= 0)
+            {
+                Error.ErrorValidation += " Цена тура не может быть меньше 1! ";
+                return false;
+            }
+            else return true;
+        }
 
-        public virtual bool IsValidationSuccessful() => IsEndNumberOfPeopleValid() &&
-            IsStartNumberOfPeopleValid() && IsPriseValid();
+        private bool IsStartNumberOfPeopleLessEndNumberOfPeople()
+        {
+            if (tour.StartNumberOfPeople > tour.EndNumberOfPeople)
+            {
+                Error.ErrorValidation += " Стартовое количество человек не может быть больше конечного количества человек! ";
+                return false;
+            }
+            else return true;
+        }
+
+        private bool IsStartNumberOfPeopleLessThenTenThousand()
+        {
+            if (tour.StartNumberOfPeople > 10000)
+            {
+                Error.ErrorValidation += " Стартовое количество человек не может быть больше 10000! ";
+                return false;
+            }
+            else return true;
+        }
+
+        public virtual ValidationError IsValidationSuccessful()
+        {
+            Error.Validation= IsEndNumberOfPeopleValid() && IsStartNumberOfPeopleValid() && IsPriseValid()&& IsStartNumberOfPeopleLessEndNumberOfPeople() && IsStartNumberOfPeopleLessThenTenThousand();
+            return Error;
+        }
     }
 }

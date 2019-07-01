@@ -1,0 +1,64 @@
+﻿@model PagedList.IPagedList<TouristAgency.Domain.Models.EfModels.Order>
+@using PagedList.Mvc;
+<link href="~/Content/PagedList.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="~/Content/MyStyle.css">
+@{
+    ViewBag.Title = "Мои заказы";
+}
+<h2>Index</h2>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayName("Название заказаного тура")
+        </th>
+        <th>
+            @Html.DisplayName("Почта заказчика")
+        </th>
+        <th>
+            @Html.DisplayName("Запрошено путевок")
+        </th>
+        <th>
+            @Html.DisplayName("Скидка")
+        </th>
+        <th>
+            @Html.DisplayName("Статус заказа")
+        </th>
+        <th>
+            @Html.DisplayName("Цена")
+        </th>
+    </tr>
+    @foreach (var item in Model)
+    {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Journey.Tour.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.User.Email)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CountOfJourneys)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Discount) %
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OrderStatus.OrdersStatus)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Journey.Tour.Price)
+        </td>
+        @{
+            double? prise = item.Journey.Tour.Price - ((item.Journey.Tour.Price * item.Discount) / 100);
+        }
+        <td>
+            Настоящая цена: @prise
+        </td>
+    </tr>
+    }
+</table>
+ Страница @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) из @Model.PageCount
+<div class="container col-4">
+    @Html.PagedListPager(Model, page => Url.Action("MyOrders", new { page, @class = "btn btn-primary" }))
+</div>
+

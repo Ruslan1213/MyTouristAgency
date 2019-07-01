@@ -11,6 +11,7 @@ using System.Web.Security;
 using TouristAgency.Domain.App_Start;
 using TouristAgency.Domain.Filters;
 using TouristAgency.WebUI.Models;
+using PagedList;
 
 namespace TouristAgency.WebUI.Controllers
 {
@@ -18,27 +19,12 @@ namespace TouristAgency.WebUI.Controllers
     {
         ILog log = log4net.LogManager.GetLogger(typeof(HomeController));
 
-
         [AllowAnonymous]
         public ActionResult Index()
         {
-            //    ApplicationMyUser myUser = db.Users.Find(System.Web.HttpContext.Current.User.Identity.GetUserId());
-            //    if (myUser != null)
-            //        if (myUser.IsBloked != null)
-            //            if ((bool)myUser.IsBloked)
-            //            {
-            //                //var AuthenticationManager = HttpContext.GetOwinContext().Authentication;
-            //                //AuthenticationManager.SignOut();
-            //                ViewBag.Error = true;
-            //                //return Redirect("Account/Login");
-            //                return View(ViewBag.Error);
-            //            }
-            //log.Debug("Debug message");
-            //log.Warn("Warn message");
-            //log.Error("Error message");
-            //log.Fatal("Fatal message");
             return View();
         }
+
         [AdminAction]
         public ActionResult About()
         {
@@ -46,6 +32,7 @@ namespace TouristAgency.WebUI.Controllers
 
             return View();
         }
+
         [Authorize]
         public ActionResult Contact()
         {
@@ -79,9 +66,21 @@ namespace TouristAgency.WebUI.Controllers
                 else if (System.Web.HttpContext.Current.User.IsInRole("manager"))
                     return View("ManagerCabinet", mUser);
                 else
+                {
+                    //ViewBag.Orders = mUser.Orders.ToList().ToPagedList(pageNumber, pageSize);
                     return View("MyCabinet", mUser);
+                }
             }
             else return View("Index");
+        }
+
+        public ActionResult MyOrders(int? page, string Id)
+        {
+            ApplicationDbContext db = new ApplicationDbContext();
+            ApplicationMyUser mUser = db.Users.Find(Id);
+            int pageSize = 3;
+            int pageNumber = (page ?? 1);
+            return View(mUser.Orders.ToList().ToPagedList(pageNumber, pageSize));
         }
 
         private bool IsAdmin(ApplicationMyUser mUser, List<string> roles)

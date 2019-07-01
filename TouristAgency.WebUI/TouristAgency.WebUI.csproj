@@ -355,6 +355,7 @@
     <Content Include="Views\HotelsTypes\Index.cshtml" />
     <Content Include="Views\Home\NoAccessRights.cshtml" />
     <Content Include="Views\Journeys\_FiltersForIndex.cshtml" />
+    <Content Include="Views\Home\MyOrders.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="Scripts\index.d.ts" />

@@ -105,30 +105,5 @@ namespace TouristAgency.WebUI.Controllers
             }
             return View(typesTour);
         }
-
-        //// GET: TypesTours/Delete/5
-        //public ActionResult Delete(int? id)
-        //{
-        //    if (id == null)
-        //    {
-        //        return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-        //    }
-        //    TypesTour typesTour = db.Find(id);
-        //    if (typesTour == null)
-        //    {
-        //        return HttpNotFound();
-        //    }
-        //    return View(typesTour);
-        //}
-
-        //// POST: TypesTours/Delete/5
-        //[HttpPost, ActionName("Delete")]
-        //[ValidateAntiForgeryToken]
-        //public ActionResult DeleteConfirmed(int id)
-        //{
-        //    TypesTour typesTour = db.Find(id);
-        //    db.Remove(typesTour);
-        //    return RedirectToAction("Index");
-        //}
     }
 }

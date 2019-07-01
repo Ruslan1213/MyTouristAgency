@@ -251,3 +251,328 @@ ERROR 2019-06-20 20:14:05,769 86523ms JourneysController     Index              
 Имя параметра: String Вызвана somemail@mail.ru c айпи ::1
 ERROR 2019-06-20 20:14:07,458 88212ms JourneysController     Index              - Значение не может быть неопределенным.
 Имя параметра: String Вызвана somemail@mail.ru c айпи ::1
+ERROR 2019-06-21 01:26:29,027 137712ms JourneysController     Index              - Значение не может быть неопределенным.
+Имя параметра: String Вызвана ruslanvolodko3@gmail.com c айпи ::1
+ERROR 2019-06-21 01:26:29,225 137910ms JourneysController     Index              - Значение не может быть неопределенным.
+Имя параметра: String Вызвана ruslanvolodko3@gmail.com c айпи ::1
+ERROR 2019-06-21 01:26:39,925 148610ms JourneysController     Index              - Входная строка имела неверный формат. Вызвана ruslanvolodko3@gmail.com c айпи ::1
+ERROR 2019-06-21 01:26:42,039 150724ms JourneysController     Index              - Значение не может быть неопределенным.
+Имя параметра: String Вызвана ruslanvolodko3@gmail.com c айпи ::1
+ERROR 2019-06-21 01:26:44,039 152724ms JourneysController     Index              - Значение не может быть неопределенным.
+Имя параметра: String Вызвана ruslanvolodko3@gmail.com c айпи ::1
+INFO  2019-06-21 01:27:10,129 178814ms OrdersController       Create             -  Пользователь ruslanvolodko3@gmail.com c айпи ::1 создал заказ 0
+INFO  2019-06-21 01:30:41,474 390159ms ationMyUsersController Edit               -  Пользователь somemail@mail.ru c айпи ::1 изменил пользователя ruslanvolodko3@gmail.com с айди c959da84-c37c-461f-96ed-9bbcaac45cc4
+ERROR 2019-06-21 01:31:48,933 457618ms JourneysController     Index              - Значение не может быть неопределенным.
+Имя параметра: String Вызвана somemail@mail.ru c айпи ::1
+ERROR 2019-06-21 01:31:48,954 457639ms JourneysController     Index              - Значение не может быть неопределенным.
+Имя параметра: String Вызвана somemail@mail.ru c айпи ::1
+ERROR 2019-06-21 01:32:25,846 494531ms JourneysController     Index              - Значение не может быть неопределенным.
+Имя параметра: String Вызвана somemail@mail.ru c айпи ::1
+ERROR 2019-06-21 01:32:25,856 494541ms JourneysController     Index              - Значение не может быть неопределенным.
+Имя параметра: String Вызвана somemail@mail.ru c айпи ::1
+INFO  2019-06-21 01:34:20,196 608881ms JourneysController     Edit               -  Пользователь somemail@mail.ru c айпи ::1 изменил путевку 8 со стартовой датой 30.06.2019 0:00:00
+ERROR 2019-06-21 01:34:20,329 609014ms JourneysController     Index              - Значение не может быть неопределенным.
+Имя параметра: String Вызвана somemail@mail.ru c айпи ::1
+ERROR 2019-06-21 01:34:20,344 609029ms JourneysController     Index              - Значение не может быть неопределенным.
+Имя параметра: String Вызвана somemail@mail.ru c айпи ::1
+ERROR 2019-06-21 01:45:17,600 63953ms JourneysController     Index              - Значение не может быть неопределенным.
+Имя параметра: String Вызвана somemail@mail.ru c айпи ::1
+ERROR 2019-06-21 01:45:17,797 64150ms JourneysController     Index              - Значение не может быть неопределенным.
+Имя параметра: String Вызвана somemail@mail.ru c айпи ::1
+INFO  2019-06-21 01:48:01,526 227879ms JourneysController     Create             -  Пользователь somemail@mail.ru c айпи ::1 добавил путевку 0 со стартовой датой 30.06.2019 0:00:00
+ERROR 2019-06-21 01:48:01,688 228041ms JourneysController     Index              - Значение не может быть неопределенным.
+Имя параметра: String Вызвана somemail@mail.ru c айпи ::1
+ERROR 2019-06-21 01:48:01,702 228055ms JourneysController     Index              - Значение не может быть неопределенным.
+Имя параметра: String Вызвана somemail@mail.ru c айпи ::1
+ERROR 2019-06-21 01:48:04,480 230833ms JourneysController     Index              - Значение не может быть неопределенным.
+Имя параметра: String Вызвана somemail@mail.ru c айпи ::1
+ERROR 2019-06-21 01:48:04,492 230845ms JourneysController     Index              - Значение не может быть неопределенным.
+Имя параметра: String Вызвана somemail@mail.ru c айпи ::1
+ERROR 2019-06-21 01:48:09,370 235723ms JourneysController     Index              - Значение не может быть неопределенным.
+Имя параметра: String Вызвана somemail@mail.ru c айпи ::1
+ERROR 2019-06-21 01:48:09,380 235733ms JourneysController     Index              - Значение не может быть неопределенным.
+Имя параметра: String Вызвана somemail@mail.ru c айпи ::1
+INFO  2019-06-21 01:49:07,881 294234ms ToursController        Edit               -  Пользователь somemail@mail.ru c айпи ::1 изменил тур 1 с названием Отдых в Египте
+INFO  2019-06-21 01:49:25,363 311716ms ToursController        Edit               -  Пользователь somemail@mail.ru c айпи ::1 изменил тур 1 с названием Отдых в Египте
+INFO  2019-06-21 01:49:34,680 321033ms ToursController        Edit               -  Пользователь somemail@mail.ru c айпи ::1 изменил тур 1 с названием Отдых в Египте
+ERROR 2019-06-21 23:48:18,458 860875ms JourneysController     Index              - Значение не может быть неопределенным.
+Имя параметра: String Вызвана ruslanvolodko4@gmail.com c айпи ::1
+ERROR 2019-06-21 23:48:18,640 861057ms JourneysController     Index              - Значение не может быть неопределенным.
+Имя параметра: String Вызвана ruslanvolodko4@gmail.com c айпи ::1
+INFO  2019-06-21 23:48:33,883 876300ms OrdersController       Create             -  Пользователь ruslanvolodko4@gmail.com c айпи ::1 пытался создать заказ 
+INFO  2019-06-21 23:48:46,018 888435ms OrdersController       Create             -  Пользователь ruslanvolodko4@gmail.com c айпи ::1 создал заказ 0
+ERROR 2019-06-21 23:48:48,024 890441ms JourneysController     Index              - Значение не может быть неопределенным.
+Имя параметра: String Вызвана ruslanvolodko4@gmail.com c айпи ::1
+ERROR 2019-06-21 23:48:48,025 890442ms JourneysController     Index              - Значение не может быть неопределенным.
+Имя параметра: String Вызвана ruslanvolodko4@gmail.com c айпи ::1
+INFO  2019-06-21 23:48:58,251 900668ms OrdersController       Create             -  Пользователь ruslanvolodko4@gmail.com c айпи ::1 создал заказ 0
+ERROR 2019-06-21 23:51:49,783 1072200ms JourneysController     Index              - Значение не может быть неопределенным.
+Имя параметра: String Вызвана somemail@mail.ru c айпи ::1
+ERROR 2019-06-21 23:51:49,784 1072201ms JourneysController     Index              - Значение не может быть неопределенным.
+Имя параметра: String Вызвана somemail@mail.ru c айпи ::1
+ERROR 2019-06-21 23:52:33,321 1115738ms JourneysController     Index              - Значение не может быть неопределенным.
+Имя параметра: String Вызвана somemail@mail.ru c айпи ::1
+ERROR 2019-06-21 23:52:33,321 1115738ms JourneysController     Index              - Значение не может быть неопределенным.
+Имя параметра: String Вызвана somemail@mail.ru c айпи ::1
+INFO  2019-06-21 23:52:41,805 1124222ms OrdersController       Create             -  Пользователь somemail@mail.ru c айпи ::1 создал заказ 0
+ERROR 2019-06-21 23:52:58,516 1140933ms JourneysController     Index              - Значение не может быть неопределенным.
+Имя параметра: String Вызвана somemail@mail.ru c айпи ::1
+ERROR 2019-06-21 23:52:58,517 1140934ms JourneysController     Index              - Значение не может быть неопределенным.
+Имя параметра: String Вызвана somemail@mail.ru c айпи ::1
+INFO  2019-06-21 23:53:05,799 1148216ms OrdersController       Create             -  Пользователь somemail@mail.ru c айпи ::1 создал заказ 0
+ERROR 2019-06-21 23:55:31,230 10414ms JourneysController     Index              - Значение не может быть неопределенным.
+Имя параметра: String Вызвана somemail@mail.ru c айпи ::1
+ERROR 2019-06-21 23:55:31,265 10449ms JourneysController     Index              - Значение не может быть неопределенным.
+Имя параметра: String Вызвана somemail@mail.ru c айпи ::1
+ERROR 2019-06-21 23:55:37,098 16282ms JourneysController     Index              - Значение не может быть неопределенным.
+Имя параметра: String Вызвана somemail@mail.ru c айпи ::1
+ERROR 2019-06-21 23:55:37,099 16283ms JourneysController     Index              - Значение не может быть неопределенным.
+Имя параметра: String Вызвана somemail@mail.ru c айпи ::1
+INFO  2019-06-21 23:55:45,255 24439ms OrdersController       Create             -  Пользователь somemail@mail.ru c айпи ::1 создал заказ 0
+ERROR 2019-06-21 23:55:50,489 29673ms JourneysController     Index              - Значение не может быть неопределенным.
+Имя параметра: String Вызвана somemail@mail.ru c айпи ::1
+ERROR 2019-06-21 23:55:50,489 29673ms JourneysController     Index              - Значение не может быть неопределенным.
+Имя параметра: String Вызвана somemail@mail.ru c айпи ::1
+INFO  2019-06-21 23:55:56,698 35882ms OrdersController       Create             -  Пользователь somemail@mail.ru c айпи ::1 создал заказ 0
+ERROR 2019-06-22 00:03:22,090 44359ms JourneysController     Index              - Значение не может быть неопределенным.
+Имя параметра: String Вызвана somemail@mail.ru c айпи ::1
+ERROR 2019-06-22 00:03:22,334 44603ms JourneysController     Index              - Значение не может быть неопределенным.
+Имя параметра: String Вызвана somemail@mail.ru c айпи ::1
+ERROR 2019-06-22 00:03:30,148 52417ms JourneysController     Index              - Значение не может быть неопределенным.
+Имя параметра: String Вызвана somemail@mail.ru c айпи ::1
+ERROR 2019-06-22 00:03:30,161 52430ms JourneysController     Index              - Значение не может быть неопределенным.
+Имя параметра: String Вызвана somemail@mail.ru c айпи ::1
+INFO  2019-06-22 00:05:08,342 150611ms OrdersController       Create             -  Пользователь somemail@mail.ru c айпи ::1 создал заказ 0
+ERROR 2019-06-22 00:06:50,936 253205ms JourneysController     Index              - Значение не может быть неопределенным.
+Имя параметра: String Вызвана somemail@mail.ru c айпи ::1
+ERROR 2019-06-22 00:06:50,977 253246ms JourneysController     Index              - Значение не может быть неопределенным.
+Имя параметра: String Вызвана somemail@mail.ru c айпи ::1
+INFO  2019-06-22 00:08:19,182 341451ms OrdersController       Create             -  Пользователь somemail@mail.ru c айпи ::1 создал заказ 0
+ERROR 2019-06-22 00:12:34,348 36462ms JourneysController     Index              - Значение не может быть неопределенным.
+Имя параметра: String Вызвана ruslanvolodko4@gmail.com c айпи ::1
+ERROR 2019-06-22 00:12:34,535 36649ms JourneysController     Index              - Значение не может быть неопределенным.
+Имя параметра: String Вызвана ruslanvolodko4@gmail.com c айпи ::1
+ERROR 2019-06-22 00:12:53,191 55305ms JourneysController     Index              - Значение не может быть неопределенным.
+Имя параметра: String Вызвана ruslanvolodko4@gmail.com c айпи ::1
+ERROR 2019-06-22 00:12:53,192 55306ms JourneysController     Index              - Значение не может быть неопределенным.
+Имя параметра: String Вызвана ruslanvolodko4@gmail.com c айпи ::1
+ERROR 2019-06-22 00:14:45,163 82534ms JourneysController     Index              - Значение не может быть неопределенным.
+Имя параметра: String Вызвана ruslanvolodko4@gmail.com c айпи ::1
+ERROR 2019-06-22 00:14:45,191 82562ms JourneysController     Index              - Значение не может быть неопределенным.
+Имя параметра: String Вызвана ruslanvolodko4@gmail.com c айпи ::1
+INFO  2019-06-22 00:14:55,217 92588ms OrdersController       Create             -  Пользователь ruslanvolodko4@gmail.com c айпи ::1 создал заказ 31
+ERROR 2019-06-22 00:15:08,220 105591ms JourneysController     Index              - Значение не может быть неопределенным.
+Имя параметра: String Вызвана ruslanvolodko4@gmail.com c айпи ::1
+ERROR 2019-06-22 00:15:08,250 105621ms JourneysController     Index              - Значение не может быть неопределенным.
+Имя параметра: String Вызвана ruslanvolodko4@gmail.com c айпи ::1
+INFO  2019-06-22 00:15:23,126 120497ms OrdersController       Create             -  Пользователь ruslanvolodko4@gmail.com c айпи ::1 создал заказ 32
+ERROR 2019-06-22 00:15:29,402 126773ms JourneysController     Index              - Значение не может быть неопределенным.
+Имя параметра: String Вызвана ruslanvolodko4@gmail.com c айпи ::1
+ERROR 2019-06-22 00:15:29,403 126774ms JourneysController     Index              - Значение не может быть неопределенным.
+Имя параметра: String Вызвана ruslanvolodko4@gmail.com c айпи ::1
+INFO  2019-06-22 00:15:35,609 132980ms OrdersController       Create             -  Пользователь ruslanvolodko4@gmail.com c айпи ::1 создал заказ 33
+ERROR 2019-06-22 00:15:41,608 138979ms JourneysController     Index              - Значение не может быть неопределенным.
+Имя параметра: String Вызвана ruslanvolodko4@gmail.com c айпи ::1
+ERROR 2019-06-22 00:15:41,617 138988ms JourneysController     Index              - Значение не может быть неопределенным.
+Имя параметра: String Вызвана ruslanvolodko4@gmail.com c айпи ::1
+ERROR 2019-06-22 00:16:25,319 182690ms JourneysController     Index              - Значение не может быть неопределенным.
+Имя параметра: String Вызвана ruslanvolodko4@gmail.com c айпи ::1
+ERROR 2019-06-22 00:16:25,320 182691ms JourneysController     Index              - Значение не может быть неопределенным.
+Имя параметра: String Вызвана ruslanvolodko4@gmail.com c айпи ::1
+ERROR 2019-06-22 00:16:27,178 184549ms JourneysController     Index              - Значение не может быть неопределенным.
+Имя параметра: String Вызвана ruslanvolodko4@gmail.com c айпи ::1
+ERROR 2019-06-22 00:16:27,179 184550ms JourneysController     Index              - Значение не может быть неопределенным.
+Имя параметра: String Вызвана ruslanvolodko4@gmail.com c айпи ::1
+INFO  2019-06-22 00:16:33,107 190478ms OrdersController       Create             -  Пользователь ruslanvolodko4@gmail.com c айпи ::1 создал заказ 34
+ERROR 2019-06-24 10:28:23,884 43896ms JourneysController     Index              - Значение не может быть неопределенным.
+Имя параметра: String Вызвана somemail@mail.ru c айпи ::1
+ERROR 2019-06-24 10:28:24,394 44406ms JourneysController     Index              - Значение не может быть неопределенным.
+Имя параметра: String Вызвана somemail@mail.ru c айпи ::1
+ERROR 2019-06-24 10:44:23,186 21231ms JourneysController     Index              - Значение не может быть неопределенным.
+Имя параметра: String Вызвана somemail@mail.ru c айпи ::1
+ERROR 2019-06-24 10:44:23,186 21231ms JourneysController     Index              - Значение не может быть неопределенным.
+Имя параметра: String Вызвана somemail@mail.ru c айпи ::1
+ERROR 2019-06-24 10:44:23,307 21352ms JourneysController     Index              - Значение не может быть неопределенным.
+Имя параметра: String Вызвана somemail@mail.ru c айпи ::1
+ERROR 2019-06-24 10:44:23,303 21348ms JourneysController     Index              - Значение не может быть неопределенным.
+Имя параметра: String Вызвана somemail@mail.ru c айпи ::1
+ERROR 2019-06-24 10:47:32,298 24372ms JourneysController     Index              - Значение не может быть неопределенным.
+Имя параметра: String Вызвана somemail@mail.ru c айпи ::1
+ERROR 2019-06-24 10:47:32,329 24403ms JourneysController     Index              - Значение не может быть неопределенным.
+Имя параметра: String Вызвана somemail@mail.ru c айпи ::1
+ERROR 2019-06-24 12:29:28,757 20748ms JourneysController     Index              - Значение не может быть неопределенным.
+Имя параметра: String Вызвана somemail@mail.ru c айпи ::1
+ERROR 2019-06-24 12:29:29,163 21154ms JourneysController     Index              - Значение не может быть неопределенным.
+Имя параметра: String Вызвана somemail@mail.ru c айпи ::1
+ERROR 2019-06-24 12:32:35,865 207856ms JourneysController     Index              - Значение не может быть неопределенным.
+Имя параметра: String Вызвана somemail@mail.ru c айпи ::1
+ERROR 2019-06-24 12:32:35,866 207857ms JourneysController     Index              - Значение не может быть неопределенным.
+Имя параметра: String Вызвана somemail@mail.ru c айпи ::1
+ERROR 2019-06-24 12:50:12,181 1264172ms JourneysController     Index              - Значение не может быть неопределенным.
+Имя параметра: String Вызвана somemail@mail.ru c айпи ::1
+ERROR 2019-06-24 12:50:12,181 1264172ms JourneysController     Index              - Значение не может быть неопределенным.
+Имя параметра: String Вызвана somemail@mail.ru c айпи ::1
+ERROR 2019-06-24 12:51:06,838 1318829ms JourneysController     Index              - Входная строка имела неверный формат. Вызвана somemail@mail.ru c айпи ::1
+ERROR 2019-06-24 12:51:06,838 1318829ms JourneysController     Index              - Входная строка имела неверный формат. Вызвана somemail@mail.ru c айпи ::1
+ERROR 2019-06-24 13:44:06,338 17995ms JourneysController     Index              - Значение не может быть неопределенным.
+Имя параметра: String Вызвана somemail@mail.ru c айпи ::1
+ERROR 2019-06-24 13:44:06,647 18304ms JourneysController     Index              - Значение не может быть неопределенным.
+Имя параметра: String Вызвана somemail@mail.ru c айпи ::1
+ERROR 2019-06-28 16:12:37,203 72449ms JourneysController     Index              - Значение не может быть неопределенным.
+Имя параметра: String Вызвана somemail@mail.ru c айпи ::1
+ERROR 2019-06-28 16:12:37,405 72651ms JourneysController     Index              - Значение не может быть неопределенным.
+Имя параметра: String Вызвана somemail@mail.ru c айпи ::1
+ERROR 2019-06-28 16:14:36,555 191801ms JourneysController     Index              - Значение не может быть неопределенным.
+Имя параметра: String Вызвана somemail@mail.ru c айпи ::1
+ERROR 2019-06-28 16:14:36,556 191802ms JourneysController     Index              - Значение не может быть неопределенным.
+Имя параметра: String Вызвана somemail@mail.ru c айпи ::1
+ERROR 2019-06-28 16:16:21,346 13448ms JourneysController     Index              - Значение не может быть неопределенным.
+Имя параметра: String Вызвана somemail@mail.ru c айпи ::1
+ERROR 2019-06-28 16:16:21,373 13475ms JourneysController     Index              - Значение не может быть неопределенным.
+Имя параметра: String Вызвана somemail@mail.ru c айпи ::1
+INFO  2019-06-28 16:19:23,778 195880ms JourneysController     Create             -  Пользователь somemail@mail.ru c айпи ::1 добавил путевку 0 со стартовой датой 29.06.2019 0:00:00
+ERROR 2019-06-28 16:19:23,994 196096ms JourneysController     Index              - Значение не может быть неопределенным.
+Имя параметра: String Вызвана somemail@mail.ru c айпи ::1
+ERROR 2019-06-28 16:19:23,994 196096ms JourneysController     Index              - Значение не может быть неопределенным.
+Имя параметра: String Вызвана somemail@mail.ru c айпи ::1
+ERROR 2019-06-28 16:19:26,852 198954ms JourneysController     Index              - Значение не может быть неопределенным.
+Имя параметра: String Вызвана somemail@mail.ru c айпи ::1
+ERROR 2019-06-28 16:19:26,852 198954ms JourneysController     Index              - Значение не может быть неопределенным.
+Имя параметра: String Вызвана somemail@mail.ru c айпи ::1
+INFO  2019-06-28 16:19:44,463 216565ms JourneysController     DeleteConfirmed    -  Пользователь somemail@mail.ru c айпи ::1 удалил путевку 17 со стартовой датой 29.06.2019 0:00:00
+ERROR 2019-06-28 16:19:44,514 216616ms JourneysController     Index              - Значение не может быть неопределенным.
+Имя параметра: String Вызвана somemail@mail.ru c айпи ::1
+ERROR 2019-06-28 16:19:44,514 216616ms JourneysController     Index              - Значение не может быть неопределенным.
+Имя параметра: String Вызвана somemail@mail.ru c айпи ::1
+ERROR 2019-06-28 16:20:28,369 260471ms JourneysController     Index              - Значение не может быть неопределенным.
+Имя параметра: String Вызвана somemail@mail.ru c айпи ::1
+ERROR 2019-06-28 16:20:28,369 260471ms JourneysController     Index              - Значение не может быть неопределенным.
+Имя параметра: String Вызвана somemail@mail.ru c айпи ::1
+ERROR 2019-06-28 16:24:51,733  6099ms JourneysController     Index              - Значение не может быть неопределенным.
+Имя параметра: String Вызвана somemail@mail.ru c айпи ::1
+ERROR 2019-06-28 16:24:51,762  6128ms JourneysController     Index              - Значение не может быть неопределенным.
+Имя параметра: String Вызвана somemail@mail.ru c айпи ::1
+ERROR 2019-06-28 16:26:34,418  4593ms JourneysController     Index              - Значение не может быть неопределенным.
+Имя параметра: String Вызвана somemail@mail.ru c айпи ::1
+ERROR 2019-06-28 16:26:34,440  4615ms JourneysController     Index              - Значение не может быть неопределенным.
+Имя параметра: String Вызвана somemail@mail.ru c айпи ::1
+ERROR 2019-06-28 16:29:40,562  5519ms JourneysController     Index              - Значение не может быть неопределенным.
+Имя параметра: String Вызвана somemail@mail.ru c айпи ::1
+ERROR 2019-06-28 16:29:40,588  5545ms JourneysController     Index              - Значение не может быть неопределенным.
+Имя параметра: String Вызвана somemail@mail.ru c айпи ::1
+ERROR 2019-06-28 16:32:12,243  6837ms JourneysController     Index              - Значение не может быть неопределенным.
+Имя параметра: String Вызвана somemail@mail.ru c айпи ::1
+ERROR 2019-06-28 16:32:12,269  6863ms JourneysController     Index              - Значение не может быть неопределенным.
+Имя параметра: String Вызвана somemail@mail.ru c айпи ::1
+ERROR 2019-06-28 16:34:02,648  5902ms JourneysController     Index              - Значение не может быть неопределенным.
+Имя параметра: String Вызвана somemail@mail.ru c айпи ::1
+ERROR 2019-06-28 16:34:02,669  5923ms JourneysController     Index              - Значение не может быть неопределенным.
+Имя параметра: String Вызвана somemail@mail.ru c айпи ::1
+ERROR 2019-06-28 16:35:55,261 118515ms JourneysController     Index              - Значение не может быть неопределенным.
+Имя параметра: String Вызвана somemail@mail.ru c айпи ::1
+ERROR 2019-06-28 16:35:55,262 118516ms JourneysController     Index              - Значение не может быть неопределенным.
+Имя параметра: String Вызвана somemail@mail.ru c айпи ::1
+ERROR 2019-06-28 16:35:56,812 120066ms JourneysController     Index              - Значение не может быть неопределенным.
+Имя параметра: String Вызвана somemail@mail.ru c айпи ::1
+ERROR 2019-06-28 16:35:56,812 120066ms JourneysController     Index              - Значение не может быть неопределенным.
+Имя параметра: String Вызвана somemail@mail.ru c айпи ::1
+ERROR 2019-06-28 16:35:57,785 121039ms JourneysController     Index              - Значение не может быть неопределенным.
+Имя параметра: String Вызвана somemail@mail.ru c айпи ::1
+ERROR 2019-06-28 16:35:57,786 121040ms JourneysController     Index              - Значение не может быть неопределенным.
+Имя параметра: String Вызвана somemail@mail.ru c айпи ::1
+ERROR 2019-06-28 16:35:58,171 121425ms JourneysController     Index              - Значение не может быть неопределенным.
+Имя параметра: String Вызвана somemail@mail.ru c айпи ::1
+ERROR 2019-06-28 16:35:58,172 121426ms JourneysController     Index              - Значение не может быть неопределенным.
+Имя параметра: String Вызвана somemail@mail.ru c айпи ::1
+ERROR 2019-06-28 16:35:58,415 121669ms JourneysController     Index              - Значение не может быть неопределенным.
+Имя параметра: String Вызвана somemail@mail.ru c айпи ::1
+ERROR 2019-06-28 16:35:58,416 121670ms JourneysController     Index              - Значение не может быть неопределенным.
+Имя параметра: String Вызвана somemail@mail.ru c айпи ::1
+ERROR 2019-06-28 16:35:58,550 121804ms JourneysController     Index              - Значение не может быть неопределенным.
+Имя параметра: String Вызвана somemail@mail.ru c айпи ::1
+ERROR 2019-06-28 16:35:58,550 121804ms JourneysController     Index              - Значение не может быть неопределенным.
+Имя параметра: String Вызвана somemail@mail.ru c айпи ::1
+ERROR 2019-06-28 16:35:58,702 121956ms JourneysController     Index              - Значение не может быть неопределенным.
+Имя параметра: String Вызвана somemail@mail.ru c айпи ::1
+ERROR 2019-06-28 16:35:58,703 121957ms JourneysController     Index              - Значение не может быть неопределенным.
+Имя параметра: String Вызвана somemail@mail.ru c айпи ::1
+INFO  2019-06-28 16:36:16,948 140202ms JourneysController     Create             -  Пользователь somemail@mail.ru c айпи ::1 добавил путевку 0 со стартовой датой 03.07.2019 0:00:00
+ERROR 2019-06-28 16:36:17,123 140377ms JourneysController     Index              - Значение не может быть неопределенным.
+Имя параметра: String Вызвана somemail@mail.ru c айпи ::1
+ERROR 2019-06-28 16:36:17,123 140377ms JourneysController     Index              - Значение не может быть неопределенным.
+Имя параметра: String Вызвана somemail@mail.ru c айпи ::1
+ERROR 2019-06-28 16:36:19,001 142255ms JourneysController     Index              - Значение не может быть неопределенным.
+Имя параметра: String Вызвана somemail@mail.ru c айпи ::1
+ERROR 2019-06-28 16:36:19,002 142256ms JourneysController     Index              - Значение не может быть неопределенным.
+Имя параметра: String Вызвана somemail@mail.ru c айпи ::1
+ERROR 2019-06-28 16:40:02,088 10814ms JourneysController     Index              - Значение не может быть неопределенным.
+Имя параметра: String Вызвана somemail@mail.ru c айпи ::1
+ERROR 2019-06-28 16:40:02,158 10884ms JourneysController     Index              - Значение не может быть неопределенным.
+Имя параметра: String Вызвана somemail@mail.ru c айпи ::1
+ERROR 2019-06-28 16:44:35,229 10933ms JourneysController     Index              - Значение не может быть неопределенным.
+Имя параметра: String Вызвана somemail@mail.ru c айпи ::1
+ERROR 2019-06-28 16:44:35,255 10959ms JourneysController     Index              - Значение не может быть неопределенным.
+Имя параметра: String Вызвана somemail@mail.ru c айпи ::1
+ERROR 2019-06-28 16:45:36,782 72486ms JourneysController     Index              - Значение не может быть неопределенным.
+Имя параметра: String Вызвана somemail@mail.ru c айпи ::1
+ERROR 2019-06-28 16:45:36,782 72486ms JourneysController     Index              - Значение не может быть неопределенным.
+Имя параметра: String Вызвана somemail@mail.ru c айпи ::1
+ERROR 2019-06-28 16:47:34,637 57622ms JourneysController     Index              - Значение не может быть неопределенным.
+Имя параметра: String Вызвана somemail@mail.ru c айпи ::1
+ERROR 2019-06-28 16:47:34,665 57650ms JourneysController     Index              - Значение не может быть неопределенным.
+Имя параметра: String Вызвана somemail@mail.ru c айпи ::1
+ERROR 2019-06-28 17:11:30,428  4740ms JourneysController     Index              - Значение не может быть неопределенным.
+Имя параметра: String Вызвана somemail@mail.ru c айпи ::1
+ERROR 2019-06-28 17:11:30,463  4775ms JourneysController     Index              - Значение не может быть неопределенным.
+Имя параметра: String Вызвана somemail@mail.ru c айпи ::1
+ERROR 2019-06-28 17:23:04,093  6075ms JourneysController     Index              - Значение не может быть неопределенным.
+Имя параметра: String Вызвана somemail@mail.ru c айпи ::1
+ERROR 2019-06-28 17:23:04,126  6108ms JourneysController     Index              - Значение не может быть неопределенным.
+Имя параметра: String Вызвана somemail@mail.ru c айпи ::1
+ERROR 2019-06-28 22:08:22,097 81688ms JourneysController     Index              - Значение не может быть неопределенным.
+Имя параметра: String Вызвана somemail@mail.ru c айпи ::1
+ERROR 2019-06-28 22:08:22,635 82226ms JourneysController     Index              - Значение не может быть неопределенным.
+Имя параметра: String Вызвана somemail@mail.ru c айпи ::1
+ERROR 2019-06-28 22:08:25,679 85270ms JourneysController     Index              - Значение не может быть неопределенным.
+Имя параметра: String Вызвана somemail@mail.ru c айпи ::1
+ERROR 2019-06-28 22:08:25,679 85270ms JourneysController     Index              - Значение не может быть неопределенным.
+Имя параметра: String Вызвана somemail@mail.ru c айпи ::1
+ERROR 2019-06-28 22:08:25,762 85353ms JourneysController     Index              - Значение не может быть неопределенным.
+Имя параметра: String Вызвана somemail@mail.ru c айпи ::1
+ERROR 2019-06-28 22:08:25,763 85354ms JourneysController     Index              - Значение не может быть неопределенным.
+Имя параметра: String Вызвана somemail@mail.ru c айпи ::1
+ERROR 2019-06-28 22:08:28,260 87851ms JourneysController     Index              - Значение не может быть неопределенным.
+Имя параметра: String Вызвана somemail@mail.ru c айпи ::1
+ERROR 2019-06-28 22:08:28,261 87852ms JourneysController     Index              - Значение не может быть неопределенным.
+Имя параметра: String Вызвана somemail@mail.ru c айпи ::1
+ERROR 2019-06-28 22:08:31,820 91411ms JourneysController     Index              - Значение не может быть неопределенным.
+Имя параметра: String Вызвана somemail@mail.ru c айпи ::1
+ERROR 2019-06-28 22:08:31,820 91411ms JourneysController     Index              - Значение не может быть неопределенным.
+Имя параметра: String Вызвана somemail@mail.ru c айпи ::1
+INFO  2019-06-28 22:10:54,163 233754ms OrdersController       Create             -  Пользователь somemail@mail.ru c айпи ::1 создал заказ 35
+ERROR 2019-06-29 19:55:24,025 6436092ms JourneysController     Index              - Значение не может быть неопределенным.
+Имя параметра: String Вызвана somemail@mail.ru c айпи ::1
+ERROR 2019-06-29 19:55:25,008 6437075ms JourneysController     Index              - Значение не может быть неопределенным.
+Имя параметра: String Вызвана somemail@mail.ru c айпи ::1
+ERROR 2019-06-29 19:56:35,693 6507760ms JourneysController     Index              - Значение не может быть неопределенным.
+Имя параметра: String Вызвана somemail@mail.ru c айпи ::1
+ERROR 2019-06-29 19:56:35,722 6507789ms JourneysController     Index              - Значение не может быть неопределенным.
+Имя параметра: String Вызвана somemail@mail.ru c айпи ::1
+ERROR 2019-06-29 19:56:44,417 6516484ms JourneysController     Index              - Входная строка имела неверный формат. Вызвана somemail@mail.ru c айпи ::1
+ERROR 2019-06-29 19:56:44,486 6516553ms JourneysController     Index              - Входная строка имела неверный формат. Вызвана somemail@mail.ru c айпи ::1
+ERROR 2019-06-29 19:56:49,486 6521553ms JourneysController     Index              - Входная строка имела неверный формат. Вызвана somemail@mail.ru c айпи ::1
+ERROR 2019-06-29 19:56:49,519 6521586ms JourneysController     Index              - Входная строка имела неверный формат. Вызвана somemail@mail.ru c айпи ::1
+ERROR 2019-06-29 19:57:44,785 6576852ms JourneysController     Index              - Входная строка имела неверный формат. Вызвана somemail@mail.ru c айпи ::1
+ERROR 2019-06-29 19:57:44,809 6576876ms JourneysController     Index              - Входная строка имела неверный формат. Вызвана somemail@mail.ru c айпи ::1
+ERROR 2019-06-29 19:57:48,723 6580790ms JourneysController     Index              - Входная строка имела неверный формат. Вызвана somemail@mail.ru c айпи ::1
+ERROR 2019-06-29 19:57:48,753 6580820ms JourneysController     Index              - Входная строка имела неверный формат. Вызвана somemail@mail.ru c айпи ::1
+ERROR 2019-06-29 19:57:51,528 6583595ms JourneysController     Index              - Входная строка имела неверный формат. Вызвана somemail@mail.ru c айпи ::1
+ERROR 2019-06-29 19:57:51,552 6583619ms JourneysController     Index              - Входная строка имела неверный формат. Вызвана somemail@mail.ru c айпи ::1
+ERROR 2019-06-29 19:57:58,586 6590653ms JourneysController     Index              - Входная строка имела неверный формат. Вызвана somemail@mail.ru c айпи ::1
+ERROR 2019-06-29 19:57:58,609 6590676ms JourneysController     Index              - Входная строка имела неверный формат. Вызвана somemail@mail.ru c айпи ::1
+ERROR 2019-06-29 19:58:07,722 6599789ms JourneysController     Index              - Входная строка имела неверный формат. Вызвана somemail@mail.ru c айпи ::1
+ERROR 2019-06-29 19:58:07,750 6599817ms JourneysController     Index              - Входная строка имела неверный формат. Вызвана somemail@mail.ru c айпи ::1
+ERROR 2019-06-30 19:34:06,794 539081ms JourneysController     Index              - Значение не может быть неопределенным.
+Имя параметра: String Вызвана somemail@mail.ru c айпи ::1
+ERROR 2019-06-30 19:34:07,037 539324ms JourneysController     Index              - Значение не может быть неопределенным.
+Имя параметра: String Вызвана somemail@mail.ru c айпи ::1

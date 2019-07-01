@@ -27,10 +27,5 @@
         </dd>
 
     </dl>
-    @foreach (var order in Model.Orders)
-    {
-        <p>@order.Journey.Tour.Name</p>
-        <p>@order.OrderStatus.OrdersStatus</p>
-        <p>@order.Journey.Tour.Price</p>
-    }
+    @Html.ActionLink("Мои заказы", "MyOrders", new { id = Model.Id })
 </div>

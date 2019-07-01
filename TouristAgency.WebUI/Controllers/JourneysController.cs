@@ -14,6 +14,7 @@ using TouristAgency.WebUI.Models;
 using PagedList.Mvc;
 using PagedList;
 using log4net;
+using TouristAgency.Domain.Validation;
 
 namespace TouristAgency.WebUI.Controllers
 {
@@ -60,10 +61,6 @@ namespace TouristAgency.WebUI.Controllers
             int ePrice = 0;
             int peopleCount = 0;
             int EpeopleCount = 0;
-            
-
-
-
 
             ViewBag.TypesTours = GetListTypeTours();
             ViewBag.HotelsType = GetListHotelsTypes();
@@ -101,74 +98,7 @@ namespace TouristAgency.WebUI.Controllers
             }
             return View(searching.ToPagedList(pageNumber, pageSize));
         }
-
-
-
-        //[Authorize]
-        //[HttpPost]
-        //public ActionResult Index(int? page, string startPrice, string finalPrice, string sAmountOfPeople, string eAmountOfPeople, string typeTour, string hotelType)
-        //{
-        //    int pageSize = 3;
-        //    int pageNumber = (page ?? 1);
-
-        //    string error = "";
-        //    int sPrice = 0;
-        //    int ePrice = 0;
-        //    int peopleCount = 0;
-        //    int EpeopleCount = 0;
-
-        //    ViewBag.startPrice = "100";
-        //    ViewBag.finalPrice = finalPrice;
-        //    ViewBag.sAmountOfPeople = sAmountOfPeople;
-        //    ViewBag.eAmountOfPeople = eAmountOfPeople;
-
-
-
-
-        //    ViewBag.TypesTours = GetListTypeTours();
-        //    ViewBag.HotelsType = GetListHotelsTypes();
-        //    var searching = db.ToList();
-        //    if (typeTour != "" && typeTour != null && typeTour != "---Please select ---")
-        //    {
-        //        searching = searching.Where(j => j.Tour.TypesTour.TypeTour == typeTour);
-        //    }
-        //    if (hotelType != "" && hotelType != null && hotelType != "---Please select ---")
-        //    {
-        //        searching = searching.Where(j => j.Tour.HotelsType.HotelType == hotelType);
-        //    }
-        //    try
-        //    {
-        //        sPrice = int.Parse(startPrice);
-        //        ePrice = int.Parse(finalPrice);
-        //        searching = searching.Where(j => (int)j.Tour.Price >= sPrice && (int)j.Tour.Price <= ePrice);
-        //    }
-        //    catch (Exception e)
-        //    {
-
-        //        error += "В поле цена введено дробное число или строка, введите целое число!";
-        //        log.Error(e.Message + " Вызвана " + User.Identity.Name + " c айпи " + Request.UserHostAddress);
-        //    }
-        //    try
-        //    {
-        //        peopleCount = int.Parse(sAmountOfPeople);
-        //        EpeopleCount = int.Parse(eAmountOfPeople);
-        //        searching = searching.Where(j => (int)j.Tour.StartNumberOfPeople >= peopleCount && (int)j.Tour.EndNumberOfPeople <= EpeopleCount);
-        //    }
-        //    catch (Exception e)
-        //    {
-        //        error += "В поле колличество человек введены не коректные данные";
-        //        log.Error(e.Message + " Вызвана " + User.Identity.Name + " c айпи " + Request.UserHostAddress);
-        //    }
-        //    ViewBag.Erroe = error;
-        //    return View(searching.ToList().ToPagedList(pageNumber, pageSize));
-        //}
-
-
-
-
-
-
-
+        
         [Authorize]
         // GET: Journeys/Details/5
         public ActionResult Details(int? id)
@@ -199,17 +129,18 @@ namespace TouristAgency.WebUI.Controllers
         [Authorize(Roles = "admin")]
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "IdJourney,IdTour,StartedDate,ExpirstionDate,StartedAmount,QuantitySold,IsLastMinuteTrip,IsDeleted")] Journey journey)
+        public ActionResult Create([Bind(Include = "IdJourney,IdTour,StartedDate,ExpirstionDate,StartedAmount,QuantitySold,IsLastMinuteTrip")] Journey journey)
         {
-
-            if (ModelState.IsValid && journey.StartedDate < journey.ExpirstionDate && journey.StartedDate > DateTime.Now && journey.DateDifference() < 2 && journey.StartedAmount < 2000)
-
+            JourneyValidation journeyValidation = new JourneyValidation(journey);
+            string error = journeyValidation.IsValidationSuccessful().ErrorValidation;
+            if (ModelState.IsValid && journeyValidation.IsValidationSuccessful().Validation)
             {
                 log.Info(" Пользователь " + User.Identity.Name + " c айпи " + Request.UserHostAddress + " добавил путевку " + journey.IdJourney + " со стартовой датой " + journey.StartedDate);
+                journey.IsDeleted = false;
                 db.Add(journey);
                 return RedirectToAction("Index");
             }
-            ViewBag.Error = "Поля дат введены не верно";
+            ViewBag.Error = error;
             ViewBag.IdTour = new SelectList(dbTour.ToList(), "IdTour", "Name", journey.IdTour);
             return View(journey);
         }
@@ -239,15 +170,15 @@ namespace TouristAgency.WebUI.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Edit([Bind(Include = "IdJourney,IdTour,StartedDate,ExpirstionDate,StartedAmount,QuantitySold,IsLastMinuteTrip,IsDeleted")] Journey journey)
         {
-            if (ModelState.IsValid && journey.StartedDate < journey.ExpirstionDate && journey.StartedDate > DateTime.Now && journey.DateDifference() < 2 && journey.StartedAmount < 2000)
+            JourneyValidation journeyValidation = new JourneyValidation(journey);
+            string error = journeyValidation.IsValidationSuccessful().ErrorValidation;
+            if (ModelState.IsValid && journeyValidation.IsValidationSuccessful().Validation)
             {
                 log.Info(" Пользователь " + User.Identity.Name + " c айпи " + Request.UserHostAddress + " изменил путевку " + journey.IdJourney + " со стартовой датой " + journey.StartedDate);
                 db.Modified(journey);
                 return RedirectToAction("Index");
             }
-            if (journey.StartedDate < journey.ExpirstionDate || journey.StartedDate > DateTime.Now || journey.DateDifference() < 2)
-                ViewBag.Error = "Поля дат введены не верно";
-
+            ViewBag.Error = error;
             ViewBag.IdTour = new SelectList(dbTour.ToList(), "IdTour", "Name", journey.IdTour);
             return View(journey);
         }
@@ -285,14 +216,7 @@ namespace TouristAgency.WebUI.Controllers
         ApplicationDbContext db1 = new ApplicationDbContext();
         private IEnumerable<SelectListItem> GetListTypeTours()
         {
-            string str;
             List<TypesTour> typesTours = db1.TypesTours.ToList();
-            foreach (var s in typesTours)
-            {
-                str = s.TypeTour;
-                str = str.Replace(" ", "");
-                s.TypeTour = str;
-            }
             return
                 from c in typesTours
                 select new SelectListItem
@@ -304,14 +228,7 @@ namespace TouristAgency.WebUI.Controllers
 
         private IEnumerable<SelectListItem> GetListHotelsTypes()
         {
-            string str;
             List<HotelsType> hotelsType = db1.HotelsTypes.ToList();
-            foreach (var s in hotelsType)
-            {
-                str = s.HotelType;
-                str = str.Replace(" ", "");
-                s.HotelType = str;
-            }
             return
                 from c in hotelsType
                 select new SelectListItem
