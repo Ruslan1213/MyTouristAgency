@@ -576,3 +576,7 @@ ERROR 2019-06-30 19:34:06,794 539081ms JourneysController     Index             
 Имя параметра: String Вызвана somemail@mail.ru c айпи ::1
 ERROR 2019-06-30 19:34:07,037 539324ms JourneysController     Index              - Значение не может быть неопределенным.
 Имя параметра: String Вызвана somemail@mail.ru c айпи ::1
+ERROR 2019-12-21 13:51:00,466 149697ms JourneysController     Index              - Значение не может быть неопределенным.
+Имя параметра: String Вызвана ruslanvolodko3@gmil.com c айпи ::1
+ERROR 2019-12-21 13:51:00,624 149855ms JourneysController     Index              - Значение не может быть неопределенным.
+Имя параметра: String Вызвана ruslanvolodko3@gmil.com c айпи ::1
